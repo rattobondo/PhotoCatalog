@@ -2,11 +2,9 @@ package org.rattobondo.photocatalog.domain;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Data
@@ -18,5 +16,7 @@ public class Keyword {
     private String name;
     private Date createDate;
     private String createUser;
+    @ManyToMany(mappedBy = "keys")
+    private Set<Photo> photos;
 
 }
