@@ -10,13 +10,16 @@ import java.util.Date;
 
 @Entity
 @Data
-public class Album {
+public class Photo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    private int idAlbum;
+    private int idLocation;
     private String name;
     private String description;
+    private String pathFile;
     private Date createDate;
     private String createUser;
 

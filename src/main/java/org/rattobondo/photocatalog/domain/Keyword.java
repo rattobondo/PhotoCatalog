@@ -10,13 +10,12 @@ import java.util.Date;
 
 @Entity
 @Data
-public class Album {
+public class Keyword {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String description;
     private Date createDate;
     private String createUser;
 
